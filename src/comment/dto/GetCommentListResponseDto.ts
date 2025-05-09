@@ -1,3 +1,5 @@
+import { CommentListView } from 'src/comment/view/CommentListView';
+
 class GetCommentListResponseCommentDto {
   placeName: string;
   content: string;
@@ -6,7 +8,7 @@ class GetCommentListResponseCommentDto {
 
 export class GetCommentListResponseDto {
   count: number;
-  comments: GetCommentListResponseCommentDto;
+  comments: GetCommentListResponseCommentDto[];
 
   static buildFromCommentListView(view: CommentListView) {
     const res = new GetCommentListResponseDto();
